@@ -19,6 +19,16 @@ Do the following:
 */
 
 
+    let votingAge = 19;
+    if(votingAge >= 18){  
+      console.log('true');
+    }
+
+
+
+
+
+
 
 /*
 Task 1b - Values
@@ -30,6 +40,11 @@ Do the following:
 
    HINT: no function required
 */
+
+let varOne = 3;
+let varTwo = 4;
+if(varTwo > varOne);
+console.log(varOne);
 
 
 
@@ -46,6 +61,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+var stringVar = "1999";
+var stringVar = 1999;
+console.log(stringVar);
+
 
 
 
@@ -58,9 +77,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(num1, num2){
+    return num1*num2;
   }
+  console.log(multiply(2,3));
 
 
 
@@ -74,9 +94,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age*7;
 }
+console.log(dogYears(3));
 
 
 
@@ -107,8 +128,18 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    if(age >= 1 && weight <= 5){
+      return weight*.05;
+    }else if(age >= 1 && weight > 5 || weight < 10){
+      return weight*.04;
+    }else if(age >= 1 && weight > 10 || weight < 15){
+      return weight*.03;
+    }else if(age >= 1 && weight > 15){
+      return(weight*.02)
+    }else if(age >= .16 || age < .33){
+      return(weight*)
+    }
   }
 
 
@@ -135,7 +166,15 @@ Use the game function below to do the following:
 */
 
 function game(user, computer){
-    /*add your code here*/
+   if (user === computer) {
+     return "it's a tie!";
+   } else if (computer === 'scissors' && user === 'rock'){
+     return "you win!";
+   } else if (computer === 'rock' && user === 'paper'){
+     return "you win!";
+   }else if (computer === 'paper' && user === 'scissors'){
+     return "you win!";
+   }
 }
   
   
@@ -201,8 +240,18 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score >= 90){
+    return 'you got an A';
+  } else if(score < 90 || score >= 80){
+    return 'you got a B';
+  } else if(score < 80 || score >= 70){
+    return 'you got a C';
+  } else if(score < 70 || score >= 60){
+    return 'you got a D';
+  } else {
+    return 'you got an F';
+  }
   }
   
   
